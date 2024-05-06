@@ -35,3 +35,4 @@ build/
 ### Others ###
 /models
 /dataset/**
+!**/src/main/**/dataset/
