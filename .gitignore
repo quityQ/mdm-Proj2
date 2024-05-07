@@ -36,4 +36,5 @@ build/
 /models
 /dataset/**
 !**/src/main/**/dataset/
-src/main/dataset/Sports10.zip
+src/main/dataset/Sports10*
+
