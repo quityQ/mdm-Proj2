@@ -45,7 +45,7 @@ import java.nio.file.Paths;
 public final class Training {
 
     // represents number of training samples processed before the model is updated
-    private static final int BATCH_SIZE = 10;
+    private static final int BATCH_SIZE = 100;
 
     // the number of passes over the complete dataset
     private static final int EPOCHS = 1;
@@ -108,6 +108,7 @@ public final class Training {
                 .addTransform(new ToTensor())
                 // random sampling; don't process the data in order
                 .setSampling(BATCH_SIZE, true)
+                .optLimit(BATCH_SIZE * 500) // limit the data to 500 samples
                 .build();
 
         dataset.prepare();
