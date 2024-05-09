@@ -33,7 +33,7 @@ build/
 .vscode/
 
 ### Others ###
-/models
+
 /dataset/**
 !**/src/main/**/dataset/
 src/main/dataset/Sports10*
