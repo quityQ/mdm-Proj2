@@ -52,7 +52,7 @@ public final class Training {
 
     public static void main(String[] args) throws IOException, TranslateException {
         // the location to save the model
-        Path modelDir = Paths.get("models");
+        Path modelDir = Paths.get("model");
 
         // create ImageFolder dataset from directory
         ImageFolder dataset = initDataset("src/main/dataset/Sports10");
