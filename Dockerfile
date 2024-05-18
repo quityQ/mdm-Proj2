@@ -4,8 +4,6 @@ FROM openjdk:21-jdk-slim
 WORKDIR /usr/src/app
 COPY . .
 
-
-
 # Install
 RUN chmod +x mvnw
 RUN ./mvnw -Dmaven.test.skip=true package

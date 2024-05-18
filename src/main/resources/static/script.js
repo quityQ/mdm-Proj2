@@ -26,26 +26,28 @@ function checkFiles(files) {
         formData.append("image", files[name]);
     }
 
-/*
-    fetch('/analyze', {
-        method: 'POST',
-        headers: {
-        },
-        body: formData
-    }).then(
-        response => {
-            console.log(response)
-            response.text().then(function (text) {
-                answer.innerHTML = text;
-            });
+    /*
+        fetch('/analyze', {
+            method: 'POST',
+            headers: {
+            },
+            body: formData
+        }).then(
+            response => {
+                console.log(response)
+                response.text().then(function (text) {
+                    answer.innerHTML = text;
+                });
+    
+            }
+        ).then(
+            success => console.log(success)
+        ).catch(
+            error => console.log(error)
+        );
+    */
 
-        }
-    ).then(
-        success => console.log(success)
-    ).catch(
-        error => console.log(error)
-    );
-*/
+    document.getElementById('loading').style.visibility = 'visible';
 
 
     fetch('/analyze', {
@@ -63,6 +65,9 @@ function checkFiles(files) {
         console.log(success);
     }).catch(error => {
         console.error(error);
+    }).finally(() => {
+        //remove loader
+        document.getElementById('loading').style.visibility = 'hidden';
     });
 }
 
